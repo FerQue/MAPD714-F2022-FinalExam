@@ -58,13 +58,37 @@
 			children = (
 				55546C2F294CD79B009560CD /* AppDelegate.swift */,
 				55546C31294CD79B009560CD /* SceneDelegate.swift */,
-				55546C33294CD79B009560CD /* ViewController.swift */,
-				55546C35294CD79B009560CD /* Main.storyboard */,
+				55546C45294D36E9009560CD /* Models */,
+				55546C44294D360D009560CD /* Controllers */,
+				55546C43294D35EA009560CD /* View */,
 				55546C38294CD79E009560CD /* Assets.xcassets */,
-				55546C3A294CD79E009560CD /* LaunchScreen.storyboard */,
 				55546C3D294CD79E009560CD /* Info.plist */,
 			);
 			path = BMICalculatorApp;
+			sourceTree = "<group>";
+		};
+		55546C43294D35EA009560CD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				55546C35294CD79B009560CD /* Main.storyboard */,
+				55546C3A294CD79E009560CD /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		55546C44294D360D009560CD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				55546C33294CD79B009560CD /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		55546C45294D36E9009560CD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
