@@ -10,13 +10,29 @@ import UIKit
 class ResultsViewController: UIViewController {
 
     @IBOutlet weak var labelResultPerson: UILabel!
-    @IBOutlet weak var labelBmiPerson: UILabel!
+    @IBOutlet weak var labelBmiPerson: UILabel! //  Is a label  Your BMI is:
     @IBOutlet weak var labelAgePerson: UILabel!
     @IBOutlet weak var labelNamePerson: UILabel!
+    
     var bmiValue: Float?
+    var agePerson: Int?
+    var namePerson: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        if let value = bmiValue{
+            labelBmiPerson.text = String(format: "%.2f", value)
+        }
+        
+        if let value1 = agePerson{
+            labelAgePerson.text = String(format: "", value1)
+        }
+        
+        if let value2 = namePerson{
+            labelNamePerson.text = String(format: "", value2)
+        }
+        
 
         // Do any additional setup after loading the view.
     }
