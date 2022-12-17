@@ -39,11 +39,32 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func calculateBMI(_ sender: Any) {
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if (segue.identifier == "ToResultVC") {
+//            let rvc = segue.destination as! ResultsViewController
+//            rvc.bmiValue = 0.5
+//            rvc.agePerson = 30
+//            rvc.namePerson = "Victor"
+//        }
+//    }
     
+    
+//override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if (segue.identifier == "ToResultVC") {
+//            let destinationVC = segue.destination as! ResultsViewController
+//            destinationVC.bmiValue = bmiCalculatorBrain.getBMIValue()
+//        }
+//    }
+    
+    @IBAction func buttonCalculatePressed(_ sender: UIButton) {
+        
         bmi = w / (h*h)
         labelResult.text = String(NSString(format: "Your BMI Value is %.2f", bmi))
+        
+        //performSegue(withIdentifier: "ToResultVC", sender: self)
     }
+    
+
     
     
     
