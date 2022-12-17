@@ -129,16 +129,67 @@
             </objects>
             <point key="canvasLocation" x="-793" y="-65"/>
         </scene>
-        <!--View Controller-->
+        <!--Results View Controller-->
         <scene sceneID="Unc-G8-vRr">
             <objects>
-                <viewController id="qLm-ai-BnL" sceneMemberID="viewController">
+                <viewController id="qLm-ai-BnL" customClass="ResultsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Uca-qA-Aah">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dzU-ei-mcZ">
+                                <rect key="frame" x="141" y="326" width="140.33333333333337" height="148.33333333333337"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Hc-Ob-ZeY">
+                                        <rect key="frame" x="0.0" y="0.0" width="140.33333333333334" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="saa-wP-7ng">
+                                        <rect key="frame" x="0.0" y="20.333333333333336" width="140.33333333333334" height="20.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your BMI is:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1KN-b3-y3Y">
+                                        <rect key="frame" x="0.0" y="40.666666666666671" width="140.33333333333334" height="33.666666666666671"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25.5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJA-TU-NMP">
+                                        <rect key="frame" x="0.0" y="74.333333333333329" width="140.33333333333334" height="73.999999999999986"/>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="62"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEt-yF-2hD">
+                                <rect key="frame" x="9" y="668" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="j45-oa-Gpp"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="RECALCULATE">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                                    <color key="baseBackgroundColor" name="BMIPink"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="recalculateButtonPressed:" destination="qLm-ai-BnL" eventType="touchUpInside" id="Xbg-Fz-wNk"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="UTp-kF-mmS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="labelAgePerson" destination="saa-wP-7ng" id="6DU-h0-veM"/>
+                        <outlet property="labelBmiPerson" destination="1KN-b3-y3Y" id="8OY-Cd-OXh"/>
+                        <outlet property="labelNamePerson" destination="7Hc-Ob-ZeY" id="hqo-yB-ZrE"/>
+                        <outlet property="labelResultPerson" destination="zJA-TU-NMP" id="Gnu-lk-8RB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dgL-g7-2GI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -146,6 +197,9 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="BMIPink">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
